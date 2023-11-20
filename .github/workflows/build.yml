@@ -26,10 +26,10 @@ jobs:
         env:
           PACT_PROVIDER: ${{ env.PACT_PROVIDER }}
         run: make test
-      - name: Publish pacts between pactflow-example-consumer and ${{ env.PACT_PROVIDER }}
-        run: GIT_BRANCH=${GIT_REF:11} make publish_pacts
-        env:
-          PACT_PROVIDER: ${{ env.PACT_PROVIDER }}
+#      - name: Publish pacts between pactflow-example-consumer and ${{ env.PACT_PROVIDER }}
+   #     run: GIT_BRANCH=${GIT_REF:11} make publish_pacts
+   #     env:
+   #       PACT_PROVIDER: ${{ env.PACT_PROVIDER }}
 
   # Runs on branches as well, so we know the status of our PRs
   can-i-deploy:
